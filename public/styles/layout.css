@@ -16,15 +16,16 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #D0AE04;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
+  text-align: center;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-#logo {
- font-family: 'Bungee', sans-serif;
+ .container {
+  margin-top: 120px;
 }

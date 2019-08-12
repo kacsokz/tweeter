@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  justify-content: space-between;
+  z-index: 9999;
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+}
+
+#logo {
+  margin: 1.5em;
+}
+
+.new-tweet {
+  margin: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: right;
+}
+
+.bold {
+  font-weight: 700;
+}
