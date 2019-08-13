@@ -19,6 +19,9 @@ main section input {
 
 main section .counter {
   font-family: 'Bungee', sans-serif;
-  color: #333333;
   float: right;
+}
+
+.red {
+  color: #f00;
 }
