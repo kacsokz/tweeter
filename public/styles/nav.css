@@ -12,17 +12,12 @@ nav {
   color: #FFFFFF;
 }
 
-#logo {
+nav span {
   margin: 1.5em;
 }
 
 .new-tweet {
-  margin: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   text-align: right;
-}
-
-.bold {
-  font-weight: 700;
 }

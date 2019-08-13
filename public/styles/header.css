@@ -1,7 +1,7 @@
 header {
   height: 400px;
   width: 100%;
-  text-align: center;
   background-image: url("/images/background-pattern.png");
   background-color: #D0AE04;
+  font-family: 'Source Sans Pro', sans-serif;
 }
