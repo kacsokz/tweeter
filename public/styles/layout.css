@@ -16,16 +16,14 @@ html {
 
 body {
   color: #545149;
-  background-color: #D0AE04;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f4f1ec;
   font-size: 24px;
-  text-align: center;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
+.container {
   margin-top: 120px;
 }
