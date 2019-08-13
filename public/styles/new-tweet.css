@@ -1,0 +1,24 @@
+main section {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main section textarea {
+  height: 45px;
+  width: 100%;
+  border-color: #f4f1ec #f4f1ec #333333 #f4f1ec;
+  border-bottom-width: 5px;
+  background-color: #f4f1ec;
+}
+
+main section input {
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  float: left;
+}
+
+main section .counter {
+  font-family: 'Bungee', sans-serif;
+  color: #333333;
+  float: right;
+}
