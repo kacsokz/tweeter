@@ -38,19 +38,25 @@ $(() => {
     $.ajax({ url: '/tweets' })
       .then((data) => {
         renderTweets(data);
-      })
+      });
   };
 
   // post request for #tweet-form
   $form.on('submit', (event) => {
     event.preventDefault();
     const formData = $form.serialize();
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: formData
-    })
-    .then(loadTweets())
+    const charMax = 140;
+    const tweetLength = $('textarea').val().length;
+    if (tweetLength > charMax || tweetLength ===0) {
+      alert('Tweets are between 1 and 140 characters.');
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: formData
+      })
+        .then(loadTweets());
+    }
   });
 
   // loop through all tweets and append to the tweet-container
