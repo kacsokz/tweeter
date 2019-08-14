@@ -2,14 +2,14 @@
   margin-top: 1em;
 }
 
-article {
+.tweet {
   border: black solid;
   padding: 1em;
   margin-bottom: 1em;
   transition: background-color .5s;
 }
 
-article:hover {
+.tweet:hover {
   box-shadow: 0 0 11px goldenrod;
 }
 
@@ -20,9 +20,10 @@ article:hover {
 
 #tweet-container h4 {
   float: right;
+  opacity: .5;
 }
 
-.tweet {
+.tweet-text {
   width: 100%;
   text-align: left;
   border-bottom: black solid;

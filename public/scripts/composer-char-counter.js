@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(() => {
   
   $("textarea").keydown(function() {
     // decrement counter
