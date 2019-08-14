@@ -55,12 +55,13 @@ $(() => {
         url: '/tweets',
         data: formData
       })
-        .then(loadTweets());
+        .then(loadTweets);
     }
   });
 
   // loop through all tweets and append to the tweet-container
   const renderTweets = function(tweets) {
+    $('#tweet-container').empty();
     for (let tweet of tweets) {
       $('#tweet-container').append(createTweetElement(tweet));
     }
