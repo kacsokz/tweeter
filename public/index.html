@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -20,8 +21,9 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Google Fonts -->
+    <!-- External Fonts and Images -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
 
   </head>
 
@@ -35,7 +37,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <header>
+
+      <header class="profile">
         <div>
           <img src="/images/profile-hex.png" alt="avatar">
         </div>
@@ -44,8 +47,9 @@
           <h2>Casey Sokach</h2>
         </div>
         <br>
-    </header>
-    <section class="new-tweet">
+      </header>
+
+      <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="post">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
@@ -53,7 +57,26 @@
           <span class="counter">140</span>
         </form>
       </section>
-    </main>
 
+      <section id="tweet-container">
+        <article>
+          <header>
+            <i class="fas fa-user-tie"></i>
+            <h3>Winston Churchill</h3>
+            <h4>@churchy</h4>
+          </header>
+          <p class="tweet">If you're going through hell, keep going</p>
+          <footer>
+            <p>10 days ago</p>
+            <div class="tweet-flags">
+                <i class="far fa-flag"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="far fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
+    </main>
   </body>
 </html>

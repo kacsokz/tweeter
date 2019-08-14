@@ -1,7 +1,8 @@
-header {
+header.profile {
   height: 400px;
   width: 100%;
   background-image: url("/images/background-pattern.png");
   background-color: #D0AE04;
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
 }

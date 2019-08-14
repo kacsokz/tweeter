@@ -1,0 +1,44 @@
+#tweet-container {
+  margin-top: 1em;
+}
+
+article {
+  border: black solid;
+  padding: 1em;
+  margin-bottom: 1em;
+  transition: background-color .5s;
+}
+
+article:hover {
+  box-shadow: 0 0 11px goldenrod;
+}
+
+#tweet-container h3, h4 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+#tweet-container h4 {
+  float: right;
+}
+
+.tweet {
+  width: 100%;
+  text-align: left;
+  border-bottom: black solid;
+}
+
+#tweet-container footer {
+  display: block;
+}
+
+#tweet-container footer p {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tweet-flags {
+  display: block;
+  float: right;
+}
