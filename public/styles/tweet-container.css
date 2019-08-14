@@ -10,30 +10,25 @@
 }
 
 .tweet:hover {
-  box-shadow: 0 0 11px goldenrod;
+  box-shadow: 0 0 11px	#ffd700;
 }
 
-#tweet-container h3, h4 {
+.tweet-username, .tweet-handle {
   display: inline-block;
   margin-top: 0;
 }
 
-#tweet-container h4 {
+.tweet-handle {
   float: right;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .tweet-text {
   width: 100%;
-  text-align: left;
-  border-bottom: black solid;
+  border-bottom: #000 solid;
 }
 
-#tweet-container footer {
-  display: block;
-}
-
-#tweet-container footer p {
+.tweet-created {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;

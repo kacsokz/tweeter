@@ -1,17 +1,18 @@
 $(() => {
   
-  $("textarea").keydown(function() {
+  $(".new-tweet textarea").keydown(function() {
     // decrement counter
     const charMax = 140;
-    let length = $(this).val().length;
-    length = charMax - length;
-    $(".counter").text(length);
+    const charLength = $(this).val().length;
+    const charExceeded = charMax - charLength;
+    const $counter = $(".counter");
+    $counter.text(charExceeded);
 
     // change color of text to red when < charMax
-    if ($(this).val().length > charMax - 1) {
-      $(".counter").addClass("red");
-    } else if ($(this).val().length < charMax) {
-      $(".counter").removeClass("red");
+    if (charLength > charMax - 1) {
+      $counter.addClass("overMaxChar");
+    } else if (charLength < charMax) {
+      $counter.removeClass("overMaxChar");
     }
     
   });

@@ -2,7 +2,7 @@ main section {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-main section textarea {
+main textarea {
   height: 45px;
   width: 100%;
   border-color: #f4f1ec #f4f1ec #333333 #f4f1ec;
@@ -10,17 +10,22 @@ main section textarea {
   background-color: #f4f1ec;
 }
 
-main section input {
+.tweet-submit {
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
   background-color: #4056A1;
+  transition: background-color .5s;
 }
 
-main section .counter {
+.tweet-submit:hover {
+  box-shadow: 0 0 11px #8c9cd4;
+}
+
+.counter {
   font-family: 'Bungee', sans-serif;
   float: right;
 }
 
-.red {
+.overMaxChar {
   color: #f00;
 }

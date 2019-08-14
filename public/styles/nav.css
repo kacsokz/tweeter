@@ -1,12 +1,11 @@
 nav {
   display: flex;
-  overflow: hidden;
+  justify-content: space-between;
   position: fixed;
   height: 120px;
   width: 100%;
   top: 0;
-  justify-content: space-between;
-  z-index: 9999;
+  z-index: 1;
   background-color: #4056A1;
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
@@ -22,9 +21,7 @@ nav span {
   text-align: right;
 }
 
-.fa-angle-double-down {
-  /* height: 100%; */
-  /* width: 100%; */
-  margin-top: 80px;
-  margin-right: 60px;
+.menu-arrow {
+  position: absolute;
+  margin: 80px 60px 60px 90%;
 }
