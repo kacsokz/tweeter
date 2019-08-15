@@ -66,6 +66,7 @@ $(() => {
         data: formData
       })
         .then($error.slideUp())
+        .then($('textarea').val(''))
         .then(loadTweets);
     }
   });
