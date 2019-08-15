@@ -109,5 +109,7 @@ $(() => {
     // focus
     $('textarea').focus();
   });
+
+  loadTweets();
     
 });
