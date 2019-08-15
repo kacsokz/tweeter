@@ -33,6 +33,13 @@ $(() => {
     return Math.floor(seconds) + " seconds";
   }
 
+  // sanitize user input
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // AJAX GET request to fetch tweets from /tweets and render to SPA
   const loadTweets = function() {
     $.ajax({ url: '/tweets' })
@@ -77,7 +84,7 @@ $(() => {
           <h3 class="tweet-username">${tweet.user.name}</h3>
           <h4 class="tweet-handle">${tweet.user.handle}</h4>
       </header>
-      <p class="tweet-text">${tweet.content.text}</p>
+      <p class="tweet-text">${escape(tweet.content.text)}</p>
       <footer>
         <p class="tweet-created">${createdDate}</p>
         <div class="tweet-flags">
