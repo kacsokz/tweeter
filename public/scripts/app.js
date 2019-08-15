@@ -38,7 +38,7 @@ $(() => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   // AJAX GET request to fetch tweets from /tweets and render to SPA
   const loadTweets = function() {
@@ -54,7 +54,7 @@ $(() => {
     const formData = $form.serialize();
     const charMax = 140;
     const tweetLength = $('textarea').val().length;
-    if (tweetLength > charMax || tweetLength ===0) {
+    if (tweetLength > charMax || tweetLength === 0) {
       alert('Tweets are between 1 and 140 characters.');
     } else {
       $.ajax({
@@ -97,5 +97,12 @@ $(() => {
 
     return $tweet.append(markup);
   };
+
+  // menu arrow slides down compose tweet section
+  $(".menu-arrow").on("click", function() {
+    $(".new-tweet").slideToggle();
+    // focus
+    $('textarea').focus();
+  });
     
 });

@@ -10,6 +10,10 @@ main textarea {
   background-color: #f4f1ec;
 }
 
+.new-tweet {
+  display: none;
+}
+
 .tweet-submit {
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;

@@ -23,5 +23,10 @@ nav span {
 
 .menu-arrow {
   position: absolute;
-  margin: 80px 60px 60px 89%;
+  margin: 80px 60px 60px 90%;
+  color: #D0AE04;
+}
+
+.menu-arrow:hover {
+  transform: skew(-15deg);
 }
