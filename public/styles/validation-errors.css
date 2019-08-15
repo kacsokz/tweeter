@@ -1,0 +1,7 @@
+.errors {
+  display: none;
+  margin: 1em;
+  border: #f00 solid;
+  text-align: center;
+  color: #f00;
+}

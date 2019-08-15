@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/validation-errors.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -45,17 +46,17 @@
         <div>
           <img src="/images/profile-hex.png" alt="avatar">
         </div>
-        <br>
         <div>
           <h2>Casey Sokach</h2>
         </div>
-        <br>
       </header>
+
+      <section class="errors">❗❗ Tweets are between 1 and 140 characters ❗❗</section>
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets/" method="post">
-          <textarea aria-label="New tweet" name="text" placeholder="What are you humming about?" required></textarea>
+          <textarea aria-label="New tweet" name="text" placeholder="What are you humming about?"></textarea>
           <input class="tweet-submit" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>

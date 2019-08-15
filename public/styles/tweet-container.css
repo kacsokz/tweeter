@@ -9,21 +9,20 @@
   transition: background-color .5s;
 }
 
-
 .tweet-handle {
   float: right;
   opacity: 0.65;
   margin-top: 0;
-  display: none;
+  opacity: 0;
 }
+
 .tweet:hover {
   box-shadow: 0 0 11px	#ffd700;
 }
 
 .tweet:hover .tweet-handle {
-  display: inline-block;
+  opacity: 0.75;
 }
-
 
 .tweet-username {
   display: inline-block;

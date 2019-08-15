@@ -6,6 +6,7 @@
 
 $(() => {
   const $form = $('#tweet-form');
+  const $error = $('.errors');
   
   // ref: https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
   function timeSince(date) {
@@ -54,14 +55,17 @@ $(() => {
     const formData = $form.serialize();
     const charMax = 140;
     const tweetLength = $('textarea').val().length;
-    if (tweetLength > charMax || tweetLength === 0) {
-      alert('Tweets are between 1 and 140 characters.');
+    // validation errors
+    if (tweetLength === 0 || tweetLength > charMax) {
+      $error.slideDown();
+    // new tweet posts if if passes validation
     } else {
       $.ajax({
         type: 'POST',
         url: '/tweets',
         data: formData
       })
+        .then($error.slideUp())
         .then(loadTweets);
     }
   });
