@@ -15,3 +15,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Desktop Layout"](https://github.com/kacsokz/tweeter/blob/master/docs/desktop.png?raw=true)
+!["Tablet Layout, user profile hidden"](https://github.com/kacsokz/tweeter/blob/master/docs/tablet-compose-tweet.png?raw=true)
