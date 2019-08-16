@@ -1,17 +1,21 @@
+/* Tablet Styles */
 .profile {
   height: 400px;
-  background-image: url("/images/background-pattern.png");
+  width: 100%;
   background-color: #D0AE04;
+  background-image: url("/images/background-pattern.png");
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
-/* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
   .profile {
-    width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute;
+    top: 200px;
+    display: inline-block;
+    width: 40%;
+    margin: 25px;
+    padding-top: 25px; 
   }
-
 }

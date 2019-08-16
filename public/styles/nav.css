@@ -1,3 +1,4 @@
+/* Tablet Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -6,7 +7,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1;
-  background-color: #4056A1;
+  background-color: #D0AE04;
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
 }
@@ -24,23 +25,19 @@ nav span {
 .menu-arrow {
   position: absolute;
   margin: 80px 60px 60px 90%;
-  color: #D0AE04;
+  color: #4056A1;
 }
 
 .menu-arrow:hover {
   transform: skew(-15deg);
 }
 
-/* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-  
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
   nav {
-    background-color: #D0AE04;
-    background-image: url("/images/background-pattern.png");
+    background-color: #4056A1;
   }
-
   .menu-arrow {
-    color: #4056A1;
+    color: #D0AE04;
   }
-
 }

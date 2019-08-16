@@ -1,5 +1,7 @@
+/* Tablet Styles */
 .new-tweet {
   display: none;
+  margin: 1em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -31,12 +33,11 @@ main textarea {
   color: #f00;
 }
 
-/* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
   .new-tweet {
-    margin: 1em;
+    width: 50%;
+    float: right;
+    margin-top: 0;
   }
-  
-
 }

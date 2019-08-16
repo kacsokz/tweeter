@@ -1,10 +1,8 @@
+/* Tablet Styles */
 #tweet-container {
   display: flex;
-  float: r
-  width: 50%;
-  margin-top: 1em;
+  margin: 0.5em 1em 0.5em 1em;
   flex-direction: column-reverse;
-  /* justify-items: flex-end; */
 }
 
 .tweet {
@@ -52,11 +50,12 @@
   color: #4056A1;
 }
 
-/* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-
-  .tweet {
-    margin: 0.5em 1em 0.5em 1em;
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  #tweet-container {
+    margin-top: 1em;
+    float: right;
+    width: 50%;
   }
 
 }

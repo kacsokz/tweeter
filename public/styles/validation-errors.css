@@ -1,3 +1,4 @@
+/* Tablet Styles */
 .errors {
   display: none;
   margin: 1em;
@@ -5,4 +6,12 @@
   border-radius: 5px;
   text-align: center;
   color: #f00;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  .errors {
+    width: 50%;
+    float: right;
+  }
 }
