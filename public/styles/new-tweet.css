@@ -1,4 +1,5 @@
-main section {
+.new-tweet {
+  display: none;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -8,10 +9,6 @@ main textarea {
   border-color: #f4f1ec #f4f1ec #333333 #f4f1ec;
   border-bottom-width: 5px;
   background-color: #f4f1ec;
-}
-
-.new-tweet {
-  display: none;
 }
 
 .tweet-submit {
@@ -32,4 +29,14 @@ main textarea {
 
 .overMaxChar {
   color: #f00;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+
+  .new-tweet {
+    margin: 1em;
+  }
+  
+
 }

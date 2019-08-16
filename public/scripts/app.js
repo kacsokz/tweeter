@@ -2,11 +2,13 @@
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+*/
 
 $(() => {
   const $form = $('#tweet-form');
   const $error = $('.errors');
+  const $tweetText = $('textarea');
+  const $tweetForm = $('.new-tweet');
   
   // ref: https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
   function timeSince(date) {
@@ -54,7 +56,7 @@ $(() => {
     event.preventDefault();
     const formData = $form.serialize();
     const charMax = 140;
-    const tweetLength = $('textarea').val().length;
+    const tweetLength = $tweetText.val().length;
     // validation errors
     if (tweetLength === 0 || tweetLength > charMax) {
       $error.slideDown();
@@ -65,9 +67,10 @@ $(() => {
         url: '/tweets',
         data: formData
       })
-        .then($error.slideUp())
-        .then($('textarea').val(''))
-        .then(loadTweets);
+      .then($tweetForm.slideUp())
+      .then($error.slideUp())
+      .then($tweetText.val(''))
+      .then(loadTweets);
     }
   });
 
@@ -105,9 +108,11 @@ $(() => {
 
   // menu arrow slides down compose tweet section
   $(".menu-arrow").on("click", function() {
-    $(".new-tweet").slideToggle();
-    // focus
-    $('textarea').focus();
+    $tweetForm.slideToggle();
+    // if error is showing, slides up when user closes compose menu
+    $error.slideUp()
+    // bring focus to form text line upon toggle down
+    $tweetText.focus();
   });
 
   loadTweets();

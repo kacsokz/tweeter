@@ -30,3 +30,17 @@ nav span {
 .menu-arrow:hover {
   transform: skew(-15deg);
 }
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  
+  nav {
+    background-color: #D0AE04;
+    background-image: url("/images/background-pattern.png");
+  }
+
+  .menu-arrow {
+    color: #4056A1;
+  }
+
+}

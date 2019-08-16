@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -27,10 +28,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
 
   </head>
-
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <span class="write-new">Write a new tweet</span>
@@ -38,10 +36,7 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-
-    <!-- Page-specific (main) content here -->
     <main class="container">
-
       <header class="profile">
         <div>
           <img src="/images/profile-hex.png" alt="avatar">
@@ -50,9 +45,7 @@
           <h2>Casey Sokach</h2>
         </div>
       </header>
-
-      <section class="errors">❗❗ Tweets are between 1 and 140 characters ❗❗</section>
-
+      <section class="errors">Tweets are between 1 and 140 characters !</section>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets/" method="post">
@@ -61,11 +54,8 @@
           <span class="counter">140</span>
         </form>
       </section>
-
       <section id="tweet-container">
-        
       </section>
-
     </main>
   </body>
 </html>

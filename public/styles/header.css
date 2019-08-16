@@ -5,3 +5,13 @@
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+
+  .profile {
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+}
