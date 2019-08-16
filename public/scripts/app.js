@@ -5,7 +5,7 @@
 
 $(() => {
   const $form = $('#tweet-form');
-  const $error = $('.errors');
+  const $errorMsg = $('.errors');
   const $tweetText = $('textarea');
   const $tweetForm = $('.new-tweet');
   
@@ -53,12 +53,13 @@ $(() => {
   // post request for #tweet-form
   $form.on('submit', (event) => {
     event.preventDefault();
+    const $counter = $('.counter');
     const charMax = 140;
     const formData = $form.serialize();
     const tweetLength = $tweetText.val().length;
     // validation
     if (tweetLength === 0 || tweetLength > charMax) {
-      $error.slideDown();
+      $errorMsg.slideDown();
     // post new tweet after validation passes
     } else {
       $.ajax({
@@ -66,9 +67,11 @@ $(() => {
         url: '/tweets',
         data: formData
       })
+        // reset the character counter
         .then($tweetForm.slideUp())
-        .then($error.slideUp())
+        .then($errorMsg.slideUp())
         .then($tweetText.val(''))
+        .then($counter.text(charMax))
         .then(loadTweets);
     }
   });
@@ -109,7 +112,7 @@ $(() => {
   $('.menu-arrow').on('click', function() {
     $tweetForm.slideToggle();
     // if error is showing, slides up when user closes compose menu
-    $error.slideUp();
+    $errorMsg.slideUp();
     // bring focus to form text line upon toggle down
     $tweetText.focus();
   });
