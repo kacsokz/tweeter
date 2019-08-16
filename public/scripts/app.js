@@ -1,7 +1,6 @@
 /*
- * Client-side JS logic goes here
+ * Client-side JS logic
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
 $(() => {
@@ -15,25 +14,25 @@ $(() => {
     let seconds = Math.floor((new Date() - date) / 1000);
     let interval = Math.floor(seconds / 31536000);
     if (interval > 1) {
-      return interval + " years";
+      return interval + ' years';
     }
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) {
-      return interval + " months";
+      return interval + ' months';
     }
     interval = Math.floor(seconds / 86400);
     if (interval > 1) {
-      return interval + " days";
+      return interval + ' days';
     }
     interval = Math.floor(seconds / 3600);
     if (interval > 1) {
-      return interval + " hours";
+      return interval + ' hours';
     }
     interval = Math.floor(seconds / 60);
     if (interval > 1) {
-      return interval + " minutes";
+      return interval + ' minutes';
     }
-    return Math.floor(seconds) + " seconds";
+    return Math.floor(seconds) + ' seconds';
   }
 
   // sanitize user input
@@ -54,23 +53,23 @@ $(() => {
   // post request for #tweet-form
   $form.on('submit', (event) => {
     event.preventDefault();
-    const formData = $form.serialize();
     const charMax = 140;
+    const formData = $form.serialize();
     const tweetLength = $tweetText.val().length;
-    // validation errors
+    // validation
     if (tweetLength === 0 || tweetLength > charMax) {
       $error.slideDown();
-    // new tweet posts if if passes validation
+    // post new tweet after validation passes
     } else {
       $.ajax({
         type: 'POST',
         url: '/tweets',
         data: formData
       })
-      .then($tweetForm.slideUp())
-      .then($error.slideUp())
-      .then($tweetText.val(''))
-      .then(loadTweets);
+        .then($tweetForm.slideUp())
+        .then($error.slideUp())
+        .then($tweetText.val(''))
+        .then(loadTweets);
     }
   });
 
@@ -107,10 +106,10 @@ $(() => {
   };
 
   // menu arrow slides down compose tweet section
-  $(".menu-arrow").on("click", function() {
+  $('.menu-arrow').on('click', function() {
     $tweetForm.slideToggle();
     // if error is showing, slides up when user closes compose menu
-    $error.slideUp()
+    $error.slideUp();
     // bring focus to form text line upon toggle down
     $tweetText.focus();
   });
